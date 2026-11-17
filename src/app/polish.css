@@ -1,0 +1,115 @@
+:root {
+  --bg: #090c12;
+  --panel: #111722;
+  --panel2: #161e2b;
+  --line: #252e3c;
+  --muted: #9aa5b6;
+  --text: #edf1f8;
+  --green: #55d6aa;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 72% -12%, #22203a 0, transparent 36rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+.main-area { min-width: 0; }
+.topbar { background: #0c1018eF; backdrop-filter: blur(14px); }
+.page-content { max-width: 1560px; padding-top: 32px; }
+.page-heading { margin-top: 34px; margin-bottom: 24px; }
+.page-heading h1 { font-size: clamp(28px, 3vw, 36px); letter-spacing: -1.25px; }
+.page-heading p { max-width: 680px; font-size: 13px; line-height: 1.6; }
+.eyebrow { font-size: 10px; letter-spacing: 1.25px; }
+.prototype-banner { border-radius: 10px; min-height: 58px; background: linear-gradient(105deg, #1b1930, #151a25 70%); }
+.prototype-banner div { font-size: 12px; }
+.prototype-banner strong { font-size: 12px; }
+
+.metric-grid { gap: 15px; }
+.metric-card, .panel, .visual-panel { border-radius: 12px; }
+.metric-card {
+  min-height: 148px;
+  padding: 18px;
+  background: linear-gradient(145deg, #151c29, #10151e 75%);
+  box-shadow: 0 12px 32px #02050a26;
+}
+.metric-value { font-size: 30px; }
+.metric-label { color: #c2cada; font-size: 12px; margin-top: 4px; }
+.metric-delta, .metric-foot { font-size: 10px; }
+.overview-grid, .bottom-grid { gap: 15px; margin-top: 16px; }
+.lifecycle-track { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.life-stage strong { font-size: 11px; }
+.life-stage small, .lifecycle-footnote { font-size: 10px; }
+.panel { background: linear-gradient(145deg, #131a25, #10151d 76%); box-shadow: 0 12px 32px #02050a20; }
+.panel-heading { padding: 19px 20px 13px; }
+.panel-heading h2 { font-size: 14px; }
+.panel-heading p { font-size: 11px; line-height: 1.5; }
+.detection-row { padding: 13px 0; }
+.detection-title { font-size: 11px; }
+.detection-detail { font-size: 10px; }
+.credentials-panel { margin-top: 16px; }
+.credentials-heading { padding-bottom: 15px; }
+.table-toolbar { padding: 0 19px 14px; }
+.search-field, .filter-field, .filter-button { height: 36px; border-radius: 7px; }
+.search-field input, .filter-field select, .filter-button { font-size: 11px; }
+thead { background: #19212e; }
+th { padding-top: 11px; padding-bottom: 11px; color: #9ba7ba; font-size: 9px; letter-spacing: .8px; }
+td { padding-top: 11px; padding-bottom: 11px; font-size: 10px; }
+tbody tr { transition: background .15s ease; }
+tbody tr:hover { background: #1a2230; }
+.credential-name strong { font-size: 10px; }
+.credential-name small { font-size: 9px; }
+.status-pill.verified-invalid { color: #8cb8ff; background: #17263a; border-color: #2b4363; }
+.status-pill.revoked { color: #f08b88; background: #2d1e24; border-color: #4b2c33; }
+.table-bottom { padding: 13px 18px; font-size: 10px; }
+.button { border-radius: 8px; height: 38px; font-size: 11px; }
+.small-button { height: 32px; font-size: 10px; }
+.page-footer { font-size: 9px; padding-top: 22px; }
+
+.dataset-callout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 15px;
+  padding: 15px 17px;
+  border: 1px solid #3b3659;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #1b1a2b, #141a24);
+}
+.dataset-callout-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  height: 38px;
+  border: 1px solid #51468a;
+  border-radius: 10px;
+  background: #292443;
+  color: #c0b5ff;
+  font-size: 12px;
+  font-weight: 750;
+}
+.dataset-callout div { min-width: 0; flex: 1; }
+.dataset-callout strong { font-size: 12px; color: #e8e5ff; }
+.dataset-callout p { margin: 4px 0 0; color: #9aa4b4; font-size: 11px; line-height: 1.5; }
+.dataset-callout a { color: #c0b5ff; font-size: 10px; text-decoration: none; white-space: nowrap; }
+.dataset-callout a:hover { color: #e0d9ff; }
+
+@media (max-width: 900px) {
+  .page-content { padding-top: 25px; }
+  .metric-grid { gap: 11px; }
+}
+
+@media (max-width: 600px) {
+  .page-content { padding: 18px 13px; }
+  .page-heading { align-items: flex-start; flex-direction: column; gap: 14px; margin: 25px 0 18px; }
+  .page-heading h1 { font-size: 27px; }
+  .metric-card { min-height: 132px; padding: 13px; }
+  .metric-value { font-size: 26px; }
+  .dataset-callout { align-items: flex-start; flex-wrap: wrap; padding: 13px; }
+  .dataset-callout div { flex-basis: calc(100% - 56px); }
+  .dataset-callout a { margin-left: 52px; }
+  .table-bottom { gap: 10px; }
+}

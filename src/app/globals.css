@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./module-visuals.css";
+@import "./polish.css";
 
 :root{--bg:#0b0e14;--panel:#11151d;--panel2:#151a24;--line:#242a35;--muted:#858d9d;--text:#e8ebf2;--green:#43d6a0;--font-sans:Arial,Helvetica,sans-serif}
 @theme inline{--color-background:var(--bg);--color-foreground:var(--text);--font-sans:var(--font-geist-sans);--font-mono:var(--font-geist-mono)}
