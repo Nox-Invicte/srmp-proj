@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Credential-to-Cloud
 
-## Getting Started
+A localhost cybersecurity research prototype for synthetic credential lifecycle, revocation assurance, and cross-layer event investigations. The current release is the Milestone 1 dashboard shell. It uses fabricated fixture data only; there are no provider connections or real credential values.
 
-First, run the development server:
+## Run the frontend
+
+Requirements: Node.js compatible with the installed Next.js 16.4.6 version and npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Use `Ctrl+C` to stop the development server.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Current scope
 
-To learn more about Next.js, take a look at the following resources:
+- Responsive dark security operations overview and module navigation.
+- Overview cards, lifecycle distribution, synthetic detections and event activity.
+- Searchable credential preview with lifecycle-state filtering.
+- Local-only scenario affordance, clearly identified as a prototype.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Metrics and inventory rows are fixtures for the first UI milestone. FastAPI, PostgreSQL, credential transitions, persistent experiments, and connected module pages have not been implemented yet. See [PRD_AND_CODEX_GUIDE.md](./PRD_AND_CODEX_GUIDE.md) for the staged requirements.
